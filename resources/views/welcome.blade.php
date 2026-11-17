@@ -37,7 +37,6 @@
                 <nav class="hidden md:flex items-center gap-8 font-bold text-sm" aria-label="Navigasi Utama">
                     <a href="#playground" class="text-[#263238] hover:text-[#245AE0] transition">Playground</a>
                     <a href="#cara-kerja" class="text-[#546E7A] hover:text-[#245AE0] transition">Cara Kerja</a>
-                    <a href="#komitmen" class="text-[#546E7A] hover:text-[#245AE0] transition">Privasi Aman</a>
                 </nav>
 
                 <div class="flex items-center gap-3">
@@ -386,64 +385,6 @@
                             <p class="text-xs text-[#526066] font-medium leading-relaxed">
                                 Pantau sisa pos keinginan secara real-time. Kamu belanja santai karena pos tabunganmu tetap utuh.
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 4. Section: Privacy & Guarantee (Clean Vector-Based Trust Seal) -->
-            <section id="komitmen" class="py-8 sm:py-12 px-4 sm:px-8 max-w-5xl mx-auto w-full">
-                <div class="p-6 sm:p-9 rounded-[32px] bg-[#FFFDF9] border-2 border-[#263238] shadow-[5px_5px_0_#263238] relative overflow-hidden">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
-                        <div class="lg:col-span-7 space-y-3.5">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-[#FFEAA0] border-2 border-[#263238] shadow-[1.5px_1.5px_0_#263238]">
-                                <x-icon name="shield-check" class="w-4 h-4 text-[#263238]" />
-                                <span class="text-xs font-black text-[#263238] tracking-wider uppercase">100% Catatan Mandiri</span>
-                            </div>
-
-                            <h3 class="text-2xl sm:text-3xl font-black text-[#263238] tracking-tight leading-tight">
-                                Uangmu, Rahasiamu. Kami Nggak Mau Tahu Rekeningmu.
-                            </h3>
-
-                            <p class="text-xs sm:text-sm text-[#526066] font-medium leading-relaxed">
-                                DuitMoo murni buku kas mandiri. Tanpa hubung rekening bank, tanpa data kartu, dan tanpa izin akses perbankan.
-                            </p>
-
-                            <!-- 3 Concrete Trust Badges -->
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
-                                <div class="p-2.5 rounded-xl bg-[#FCF6EB] border border-[#263238]/30 flex items-center gap-2">
-                                    <span class="w-5 h-5 rounded-lg bg-white border border-[#263238] flex items-center justify-center text-[10px] font-black text-[#1C7C49]">✓</span>
-                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Nol Akses Bank</span>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-[#FCF6EB] border border-[#263238]/30 flex items-center gap-2">
-                                    <span class="w-5 h-5 rounded-lg bg-white border border-[#263238] flex items-center justify-center text-[10px] font-black text-[#1C7C49]">✓</span>
-                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Mode Sensor Saldo</span>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-[#FCF6EB] border border-[#263238]/30 flex items-center gap-2">
-                                    <span class="w-5 h-5 rounded-lg bg-white border border-[#263238] flex items-center justify-center text-[10px] font-black text-[#1C7C49]">✓</span>
-                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Ekspor G-Sheets</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right CTA Card -->
-                        <div class="lg:col-span-5 p-5 sm:p-6 rounded-2xl bg-[#FFF9E6] border-2 border-[#263238] shadow-[3px_3px_0_#263238] text-center space-y-3">
-                            <div class="w-12 h-12 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mx-auto flex items-center justify-center p-2">
-                                <x-brand-logo size="sm" />
-                            </div>
-                            <div>
-                                <span class="px-2 py-0.5 rounded-md bg-[#EDFAF3] text-[#114A2D] border border-[#263238] text-[10px] font-black uppercase">
-                                    Gratis Selamanya!
-                                </span>
-                                <h4 class="font-black text-base text-[#263238] mt-1.5">Siap Berhenti Boncos?</h4>
-                                <p class="text-xs text-[#634800] font-medium mt-0.5">Mulai atur alokasi uangmu sekarang tanpa biaya langganan.</p>
-                            </div>
-                            <a href="{{ route('register') }}"
-                               class="brick-btn brick-btn-yellow w-full py-3 text-xs sm:text-sm font-black flex items-center justify-center gap-2 shadow-[2px_2px_0_#263238] hover:scale-102 transition-transform">
-                                <span>Daftar Sekarang — Gratis!</span>
-                                <x-icon name="arrow-right" class="w-4 h-4" />
-                            </a>
-                            <p class="text-[10px] text-[#526066] font-bold">Tanpa kartu kredit · Siap pakai di HP</p>
                         </div>
                     </div>
                 </div>
