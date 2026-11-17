@@ -389,15 +389,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Mid-Section CTA Banner -->
-                <div class="mt-8 text-center">
-                    <a href="{{ route('register') }}"
-                       class="brick-btn brick-btn-yellow px-6 py-3 text-xs sm:text-sm font-black inline-flex items-center gap-2 shadow-[2px_2px_0_#263238] hover:scale-105 transition-transform">
-                        <span>Mulai Atur Anggaran — 100% Gratis!</span>
-                        <x-icon name="arrow-right" class="w-4 h-4" />
-                    </a>
-                </div>
             </section>
 
             <!-- 4. Section: Privacy & Guarantee (Clean Vector-Based Trust Seal) -->
