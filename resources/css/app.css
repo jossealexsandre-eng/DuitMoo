@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+@source '../../app/**/*.php';
+
+@theme {
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --color-cream: #FCF6EB;
+    --color-cream-card: #FFFDF9;
+    --color-dark: #263238;
+    --color-yellow: #FFD54F;
+    --color-yellow-soft: #FFEAA0;
+    --color-blue: #407BFF;
+    --color-blue-cta: #245AE0;
+    --color-green: #45C486;
+    --color-green-soft: #D8F5E5;
+    --color-red: #FF6B6B;
+    --color-red-soft: #FFE2DE;
+    --color-purple: #9B7EDE;
+    --color-purple-soft: #EAE2FF;
+}
+
+:root {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FCF6EB;
+    color: #263238;
+}
+
+/* Aesthetic Notebook / Gameboard Grid Background (Cute & Clean) */
+.bg-aesthetic-grid {
+    background-color: #FCF6EB;
+    background-image: 
+        linear-gradient(to right, rgba(38, 50, 56, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(38, 50, 56, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+/* Visible Keyboard Focus Indicator (WCAG / R-32) */
+:focus-visible {
+    outline: 3px solid #245AE0;
+    outline-offset: 2px;
+}
+
+/* Prevent iOS input auto-zoom */
+@media (max-width: 767px) {
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Calm Base Sheet Card */
+.brick-card {
+    border-radius: 22px;
+    border: 2px solid #263238;
+    box-shadow: 2px 3px 0 #263238;
+    position: relative;
+    transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+/* Tactile Focal Pop Card (reserved for key focal cards & primary visual moments) */
+.brick-card-pop {
+    border-radius: 24px;
+    border: 2px solid #263238;
+    box-shadow: 3px 4px 0 #263238;
+    position: relative;
+    transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.16s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Postcase Postal Aesthetic Utilities (Inspired by Reference 3) */
+.postcase-stamp-badge {
+    border: 2px solid #263238;
+    border-radius: 12px;
+    box-shadow: 1.5px 1.5px 0 #263238;
+    font-weight: 800;
+}
+
+.postcase-dashed-box {
+    border: 2px dashed rgba(38, 50, 56, 0.3);
+    border-radius: 20px;
+    background-color: #FCF6EB;
+}
+
+.brick-card-interactive:hover {
+    transform: translateY(-2px);
+    border-color: #263238;
+    box-shadow: 3px 4px 0 #263238;
+}
+
+/* Tactile Buttons (min 44px tap target, crisp offset press) */
+.brick-btn {
+    border: 2px solid #263238;
+    border-radius: 14px;
+    font-weight: 700;
+    min-height: 44px;
+    transition: transform 0.14s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.14s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.14s ease;
+    box-shadow: 0 3px 0 #263238;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brick-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 0 #263238;
+}
+
+.brick-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #263238;
+}
+
+.brick-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.brick-btn-yellow {
+    background-color: #FFD54F;
+    color: #263238;
+}
+.brick-btn-yellow:hover {
+    background-color: #F7C731;
+}
+
+.brick-btn-blue {
+    background-color: #245AE0;
+    color: #FFFFFF;
+}
+.brick-btn-blue:hover {
+    background-color: #1D4CC2;
+}
+
+.brick-btn-green {
+    background-color: #1C7C49;
+    color: #FFFFFF;
+}
+.brick-btn-green:hover {
+    background-color: #156239;
+}
+
+.brick-btn-red {
+    background-color: #C93535;
+    color: #FFFFFF;
+}
+.brick-btn-red:hover {
+    background-color: #A82828;
+}
+
+.brick-btn-purple {
+    background-color: #6340B0;
+    color: #FFFFFF;
+}
+.brick-btn-purple:hover {
+    background-color: #503294;
+}
+
+.brick-btn-white {
+    background-color: #FFFFFF;
+    color: #263238;
+}
+.brick-btn-white:hover {
+    background-color: #F6EFE2;
+}
+
+/* Progress Track */
+.brick-progress-track {
+    background-color: #F3EAD7;
+    border-radius: 999px;
+    border: 1.5px solid #263238;
+    overflow: hidden;
+    height: 14px;
+}
+
+.brick-progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Functional Status Badges (WCAG AA >= 4.5:1) */
+.brick-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    border: 1.5px solid #263238;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.brick-badge-needs {
+    background-color: #D8F5E5;
+    color: #114A2D;
+}
+
+.brick-badge-wants {
+    background-color: #FFEAA0;
+    color: #263238;
+}
+
+.brick-badge-emergency {
+    background-color: #EAE2FF;
+    color: #3A1D75;
+}
+
+.brick-badge-danger {
+    background-color: #FFE2DE;
+    color: #8C1D1D;
+}
+
+.brick-badge-blue {
+    background-color: #E0EAFF;
+    color: #163C94;
+}
+
+/* Playful Floating Cute Cows Background & Tactile Animations */
+@keyframes cow-drift-1 {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-14px) translateX(8px) rotate(3deg);
+    }
+    66% {
+        transform: translateY(10px) translateX(-6px) rotate(-3deg);
+    }
+}
+
+@keyframes cow-drift-2 {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    40% {
+        transform: translateY(-18px) translateX(-10px) rotate(-4deg);
+    }
+    80% {
+        transform: translateY(12px) translateX(8px) rotate(3deg);
+    }
+}
+
+@keyframes cow-drift-3 {
+    0%, 100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-22px) scale(1.05) rotate(5deg);
+    }
+}
+
+@keyframes cow-bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.anim-cow-float-1 {
+    animation: cow-drift-1 9s ease-in-out infinite;
+}
+
+.anim-cow-float-2 {
+    animation: cow-drift-2 12s ease-in-out infinite;
+}
+
+.anim-cow-float-3 {
+    animation: cow-drift-3 15s ease-in-out infinite;
+}
+
+.anim-cow-bob {
+    animation: cow-bob 4s ease-in-out infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .anim-cow-float-1,
+    .anim-cow-float-2,
+    .anim-cow-float-3,
+    .anim-cow-bob,
+    .brick-card,
+    .brick-card-pop,
+    .brick-btn,
+    .brick-progress-fill,
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
