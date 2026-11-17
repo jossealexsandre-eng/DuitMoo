@@ -585,7 +585,7 @@
                         maintainAspectRatio: false,
                         cutout: '62%',
                         plugins: {
-                            legend: { position: 'bottom', labels: { font: { family: 'Poppins', weight: 'bold', size: 12 }, color: '#263238', padding: 14 } },
+                            legend: { position: 'bottom', labels: { font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 12 }, color: '#263238', padding: 14 } },
                             tooltip: { callbacks: { label: (ctx) => ' ' + ctx.label + ': Rp ' + (ctx.parsed || 0).toLocaleString('id-ID') } }
                         }
                     }
@@ -608,12 +608,12 @@
                         responsive: true,
                         maintainAspectRatio: false,
                         plugins: {
-                            legend: { position: 'bottom', labels: { font: { family: 'Poppins', weight: 'bold', size: 12 }, color: '#263238', padding: 14 } },
+                            legend: { position: 'bottom', labels: { font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 12 }, color: '#263238', padding: 14 } },
                             tooltip: { callbacks: { label: (ctx) => ' ' + ctx.dataset.label + ': Rp ' + (ctx.parsed.y || 0).toLocaleString('id-ID') } }
                         },
                         scales: {
-                            y: { beginAtZero: true, grid: { color: '#EFE6D5' }, ticks: { font: { family: 'Poppins', size: 10 }, callback: (v) => v >= 1000000 ? (v / 1000000) + ' Jt' : (v >= 1000 ? (v / 1000) + ' Rb' : v) } },
-                            x: { grid: { display: false }, ticks: { font: { family: 'Poppins', weight: 'bold', size: 11 }, color: '#263238' } }
+                            y: { beginAtZero: true, grid: { color: '#EFE6D5' }, ticks: { font: { family: 'Plus Jakarta Sans', size: 10 }, callback: (v) => v >= 1000000 ? (v / 1000000) + ' Jt' : (v >= 1000 ? (v / 1000) + ' Rb' : v) } },
+                            x: { grid: { display: false }, ticks: { font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 11 }, color: '#263238' } }
                         }
                     }
                 });
@@ -643,12 +643,12 @@
                         responsive: true,
                         maintainAspectRatio: false,
                         plugins: {
-                            legend: { position: 'bottom', labels: { font: { family: 'Poppins', weight: 'bold', size: 12 }, color: '#263238' } },
+                            legend: { position: 'bottom', labels: { font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 12 }, color: '#263238' } },
                             tooltip: { callbacks: { label: (ctx) => ' Sisa: Rp ' + (ctx.parsed.y || 0).toLocaleString('id-ID') } }
                         },
                         scales: {
-                            y: { grid: { color: '#EFE6D5' }, ticks: { font: { family: 'Poppins', size: 10 }, callback: (v) => Math.abs(v) >= 1000000 ? (v / 1000000) + ' Jt' : (Math.abs(v) >= 1000 ? (v / 1000) + ' Rb' : v) } },
-                            x: { grid: { display: false }, ticks: { font: { family: 'Poppins', weight: 'bold', size: 11 }, color: '#263238' } }
+                            y: { grid: { color: '#EFE6D5' }, ticks: { font: { family: 'Plus Jakarta Sans', size: 10 }, callback: (v) => Math.abs(v) >= 1000000 ? (v / 1000000) + ' Jt' : (Math.abs(v) >= 1000 ? (v / 1000) + ' Rb' : v) } },
+                            x: { grid: { display: false }, ticks: { font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 11 }, color: '#263238' } }
                         }
                     }
                 });
@@ -679,8 +679,8 @@
                             tooltip: { callbacks: { label: (ctx) => ' Rp ' + (ctx.parsed.x || 0).toLocaleString('id-ID') } }
                         },
                         scales: {
-                            x: { beginAtZero: true, grid: { color: '#EFE6D5' }, ticks: { font: { family: 'Poppins', size: 10 }, callback: (v) => v >= 1000000 ? (v / 1000000) + ' Jt' : (v >= 1000 ? (v / 1000) + ' Rb' : v) } },
-                            y: { grid: { display: false }, ticks: { font: { family: 'Poppins', weight: 'bold', size: 11 }, color: '#263238' } }
+                            x: { beginAtZero: true, grid: { color: '#EFE6D5' }, ticks: { font: { family: 'Plus Jakarta Sans', size: 10 }, callback: (v) => v >= 1000000 ? (v / 1000000) + ' Jt' : (v >= 1000 ? (v / 1000) + ' Rb' : v) } },
+                            y: { grid: { display: false }, ticks: { font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 11 }, color: '#263238' } }
                         }
                     }
                 });

@@ -111,9 +111,9 @@
             // Header Text
             ctx.fillStyle = '#263238';
             ctx.textAlign = 'center';
-            ctx.font = '900 28px Poppins, sans-serif';
+            ctx.font = '900 28px Plus Jakarta Sans, sans-serif';
             ctx.fillText('🐮 SLIP ANGGARAN DUITMOO', w / 2, pad + 56);
-            ctx.font = '700 16px Poppins, sans-serif';
+            ctx.font = '700 16px Plus Jakarta Sans, sans-serif';
             ctx.fillText('Periode: ' + d.monthLabel + '  |  #' + d.slipCode, w / 2, pad + 92);
 
             let y = pad + 165;
@@ -122,12 +122,12 @@
 
             const drawRow = (label, val, bold = false, valColor = '#263238') => {
                 ctx.textAlign = 'left';
-                ctx.font = (bold ? '800 ' : '600 ') + '18px Poppins, sans-serif';
+                ctx.font = (bold ? '800 ' : '600 ') + '18px Plus Jakarta Sans, sans-serif';
                 ctx.fillStyle = '#526066';
                 ctx.fillText(label, leftX, y);
 
                 ctx.textAlign = 'right';
-                ctx.font = (bold ? '900 ' : '800 ') + '19px Poppins, sans-serif';
+                ctx.font = (bold ? '900 ' : '800 ') + '19px Plus Jakarta Sans, sans-serif';
                 ctx.fillStyle = valColor;
                 ctx.fillText(val, rightX, y);
                 y += 38;
@@ -157,19 +157,19 @@
             drawDashedLine();
 
             ctx.textAlign = 'left';
-            ctx.font = '900 18px Poppins, sans-serif';
+            ctx.font = '900 18px Plus Jakarta Sans, sans-serif';
             ctx.fillStyle = '#263238';
             ctx.fillText('RINCIAN 3 POS ANGGARAN', leftX, y);
             y += 34;
 
             d.buckets.forEach((b) => {
                 ctx.textAlign = 'left';
-                ctx.font = '800 17px Poppins, sans-serif';
+                ctx.font = '800 17px Plus Jakarta Sans, sans-serif';
                 ctx.fillStyle = '#263238';
                 ctx.fillText(b.label + ' (' + b.percent + '%)', leftX, y);
 
                 ctx.textAlign = 'right';
-                ctx.font = '800 17px Poppins, sans-serif';
+                ctx.font = '800 17px Plus Jakarta Sans, sans-serif';
                 ctx.fillStyle = b.is_overspent ? '#C93535' : '#1C7C49';
                 ctx.fillText(this.formatRp(b.spent) + ' / ' + this.formatRp(b.allocated) + ' (' + b.progress + '%)', rightX, y);
                 y += 36;
@@ -190,11 +190,11 @@
 
             ctx.textAlign = 'left';
             ctx.fillStyle = '#E0EAFF';
-            ctx.font = '700 15px Poppins, sans-serif';
+            ctx.font = '700 15px Plus Jakarta Sans, sans-serif';
             ctx.fillText('PERKIRAAN SISA UANG', leftX + 20, y + 26);
 
             ctx.fillStyle = '#FFFFFF';
-            ctx.font = '900 24px Poppins, sans-serif';
+            ctx.font = '900 24px Plus Jakarta Sans, sans-serif';
             ctx.fillText(this.formatRp(d.remainingCash), leftX + 20, y + 58);
 
             // Postcase Stamp on Right
@@ -208,14 +208,14 @@
             ctx.strokeRect(-95, -22, 190, 44);
             ctx.fillStyle = d.isHealthy ? '#114A2D' : '#8C1D1D';
             ctx.textAlign = 'center';
-            ctx.font = '900 13px Poppins, sans-serif';
+            ctx.font = '900 13px Plus Jakarta Sans, sans-serif';
             ctx.fillText(d.isHealthy ? '★ ANGGARAN SEHAT ★' : '⚡ PERLU REM BELANJA', 0, 5);
             ctx.restore();
 
             // Footer
             ctx.textAlign = 'center';
             ctx.fillStyle = '#526066';
-            ctx.font = '700 14px Poppins, sans-serif';
+            ctx.font = '700 14px Plus Jakarta Sans, sans-serif';
             ctx.fillText('Dicetak otomatis dari aplikasi DuitMoo 2.0', w / 2, h - pad - 24);
 
             const link = document.createElement('a');

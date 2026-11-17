@@ -311,8 +311,8 @@
                             tooltip: { callbacks: { label: (ctx) => ' Rp ' + (ctx.parsed.y || 0).toLocaleString('id-ID') } }
                         },
                         scales: {
-                            y: { beginAtZero: true, ticks: { font: { family: 'Poppins', size: 10 }, callback: (v) => v >= 1000000 ? (v/1000000)+' Jt' : (v >= 1000 ? (v/1000)+' Rb' : v) } },
-                            x: { grid: { display: false }, ticks: { font: { family: 'Poppins', size: 10 } } }
+                            y: { beginAtZero: true, ticks: { font: { family: 'Plus Jakarta Sans', size: 10 }, callback: (v) => v >= 1000000 ? (v/1000000)+' Jt' : (v >= 1000 ? (v/1000)+' Rb' : v) } },
+                            x: { grid: { display: false }, ticks: { font: { family: 'Plus Jakarta Sans', size: 10 } } }
                         }
                     }
                 });
@@ -333,8 +333,8 @@
                     options: {
                         responsive: true,
                         maintainAspectRatio: false,
-                        plugins: { legend: { position: 'bottom', labels: { font: { family: 'Poppins', weight: 'bold' } } } },
-                        scales: { y: { beginAtZero: true, ticks: { font: { family: 'Poppins', size: 10 }, callback: (v) => (v/1000000) + ' Jt' } } }
+                        plugins: { legend: { position: 'bottom', labels: { font: { family: 'Plus Jakarta Sans', weight: 'bold' } } } },
+                        scales: { y: { beginAtZero: true, ticks: { font: { family: 'Plus Jakarta Sans', size: 10 }, callback: (v) => (v/1000000) + ' Jt' } } }
                     }
                 });
             }
@@ -354,8 +354,8 @@
                     options: {
                         responsive: true,
                         maintainAspectRatio: false,
-                        plugins: { legend: { position: 'bottom', labels: { font: { family: 'Poppins', weight: 'bold' } } } },
-                        scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, ticks: { font: { family: 'Poppins', size: 10 }, callback: (v) => (v/1000000) + ' Jt' } } }
+                        plugins: { legend: { position: 'bottom', labels: { font: { family: 'Plus Jakarta Sans', weight: 'bold' } } } },
+                        scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, ticks: { font: { family: 'Plus Jakarta Sans', size: 10 }, callback: (v) => (v/1000000) + ' Jt' } } }
                     }
                 });
             }
@@ -372,7 +372,7 @@
                     options: {
                         responsive: true,
                         maintainAspectRatio: false,
-                        plugins: { legend: { position: 'bottom', labels: { font: { family: 'Poppins', size: 10 } } } }
+                        plugins: { legend: { position: 'bottom', labels: { font: { family: 'Plus Jakarta Sans', size: 10 } } } }
                     }
                 });
             }
