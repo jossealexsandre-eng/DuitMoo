@@ -79,260 +79,182 @@
                     </p>
                 </div>
 
-                <!-- Interactive 3D Perspective Phone Mockup (Inspired by Editorial UI & 3D Smartphone Device) -->
-                <div class="max-w-[430px] mx-auto perspective-[1200px] text-left">
-                    <div class="relative transition-all duration-500 ease-out transform md:rotate-y-[-6deg] md:rotate-x-[4deg] md:hover:rotate-0 md:hover:scale-[1.01] filter drop-shadow-[0_20px_40px_rgba(38,50,56,0.18)]">
+                <!-- Interactive Phone Playground Card (Centered, Clean, Animated) -->
+                <div class="max-w-[420px] mx-auto">
+                    <div class="bg-[#FFFDF9] rounded-[38px] border-3 border-[#263238] p-5 sm:p-6 shadow-[6px_6px_0_#263238] hover:shadow-[8px_8px_0_#263238] transition-all relative overflow-hidden text-left">
                         
-                        <!-- Physical Smartphone Outer Frame (Dark Metallic Titanium Finish) -->
-                        <div class="bg-[#1C2024] p-[10px] sm:p-[12px] rounded-[48px] sm:rounded-[54px] border-4 border-[#263238] shadow-[inset_0_0_0_2px_rgba(255,255,255,0.15),0_15px_30px_rgba(0,0,0,0.25)] relative">
-                            
-                            <!-- Hardware Side Buttons Accent -->
-                            <div class="hidden sm:block absolute -left-[14px] top-28 w-[6px] h-10 bg-[#263238] rounded-l-md"></div>
-                            <div class="hidden sm:block absolute -left-[14px] top-42 w-[6px] h-10 bg-[#263238] rounded-l-md"></div>
-                            <div class="hidden sm:block absolute -right-[14px] top-32 w-[6px] h-14 bg-[#263238] rounded-r-md"></div>
+                        <!-- Phone Speaker Notch -->
+                        <div class="w-20 h-1.5 bg-[#263238]/20 rounded-full mx-auto mb-4"></div>
 
-                            <!-- Screen Canvas Container -->
-                            <div class="bg-[#FFFDF9] rounded-[38px] sm:rounded-[44px] overflow-hidden border-2 border-[#263238] p-4 sm:p-5 relative select-none">
-                                
-                                <!-- Realistic Dynamic Island & Status Bar Header -->
-                                <div class="flex items-center justify-between px-1 pt-0.5 pb-3 text-[10px] font-black text-[#263238]">
-                                    <span>9:41</span>
-                                    <!-- Dynamic Island Pill -->
-                                    <div class="w-24 h-5 bg-[#1C2024] rounded-full flex items-center justify-between px-2.5 shadow-inner">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-[#111] border border-white/20"></span>
-                                        <span class="w-1.5 h-1.5 rounded-full bg-[#245AE0] animate-pulse"></span>
-                                    </div>
-                                    <div class="flex items-center gap-1.5 text-xs text-[#263238]">
-                                        <span class="text-[9px] font-black">5G</span>
-                                        <div class="w-4 h-2 border border-[#263238] rounded-xs p-0.5 flex items-center">
-                                            <div class="h-full w-full bg-[#263238] rounded-2xs"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- App Header Bar: Avatar Cow Mascot & Live Status Pill -->
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="flex items-center gap-2.5">
-                                        <div class="w-9 h-9 rounded-2xl bg-[#FFD54F] border-2 border-[#263238] flex items-center justify-center text-base shadow-[1.5px_1.5px_0_#263238]">
-                                            🐮
-                                        </div>
-                                        <div>
-                                            <span class="text-[10px] font-black uppercase tracking-wider text-[#526066] block leading-tight">Halo, Juragan!</span>
-                                            <h2 class="text-sm font-black text-[#263238] leading-tight">Papan Alokasi Pos</h2>
-                                        </div>
-                                    </div>
-                                    <span class="px-2.5 py-1 rounded-full bg-[#D8F5E5] text-[#114A2D] border border-[#263238] text-[10px] font-black flex items-center gap-1 shadow-[1px_1px_0_#263238]">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse"></span>
-                                        Demo Interaktif
-                                    </span>
-                                </div>
-
-                                <!-- Hero Card: Saldo Awal (Warm Editorial Style with Segmented Bar) -->
-                                <div class="p-3.5 sm:p-4 rounded-2xl bg-[#FFF9E6] border-2 border-[#263238] mb-3 space-y-2 shadow-[2px_2px_0_#263238]">
-                                    <div class="flex justify-between items-center text-xs font-bold text-[#526066]">
-                                        <span class="text-[11px] font-black uppercase tracking-wider text-[#263238] flex items-center gap-1">
-                                            <span>💰</span> Saldo Tersedia
-                                        </span>
-                                        <span class="text-[10px] font-black text-[#245AE0] bg-white px-2 py-0.5 rounded-lg border border-[#263238]/20">Geser Nilai &darr;</span>
-                                    </div>
-                                    <p class="text-2xl sm:text-3xl font-black text-[#263238] tracking-tight tabular-nums" x-text="'Rp ' + (landingAmount || 0).toLocaleString('id-ID')"></p>
-
-                                    <!-- Quick Preset Buttons & Interactive Slider -->
-                                    <div class="pt-0.5 flex items-center gap-1.5">
-                                        <button type="button" @click="setAmount(3000000)"
-                                                :class="landingAmount === 3000000 ? 'bg-[#FFD54F] border-[#263238] shadow-[1px_1px_0_#263238]' : 'bg-white border-[#263238]/25 text-[#526066]'"
-                                                class="px-2.5 py-1 rounded-xl border-2 text-[11px] font-black transition-all cursor-pointer">
-                                            3 Jt
-                                        </button>
-                                        <button type="button" @click="setAmount(5000000)"
-                                                :class="landingAmount === 5000000 ? 'bg-[#FFD54F] border-[#263238] shadow-[1px_1px_0_#263238]' : 'bg-white border-[#263238]/25 text-[#526066]'"
-                                                class="px-2.5 py-1 rounded-xl border-2 text-[11px] font-black transition-all cursor-pointer">
-                                            5 Jt
-                                        </button>
-                                        <button type="button" @click="setAmount(10000000)"
-                                                :class="landingAmount === 10000000 ? 'bg-[#FFD54F] border-[#263238] shadow-[1px_1px_0_#263238]' : 'bg-white border-[#263238]/25 text-[#526066]'"
-                                                class="px-2.5 py-1 rounded-xl border-2 text-[11px] font-black transition-all cursor-pointer">
-                                            10 Jt
-                                        </button>
-                                        <input type="range" min="1000000" max="15000000" step="500000" x-model.number="landingAmount"
-                                               @input="isCustomLocked = (landingAmount != 5000000)"
-                                               aria-label="Ubah Nominal Saldo" class="ml-1 flex-1 accent-[#245AE0] cursor-pointer h-2 bg-white rounded-lg border border-[#263238]/30">
-                                    </div>
-
-                                    <!-- Segmented Color Budget Bar (Inspired by Editorial Layout in Gambar 1) -->
-                                    <div class="pt-1.5 border-t border-[#263238]/10">
-                                        <div class="h-2.5 w-full bg-white rounded-full border border-[#263238] flex overflow-hidden p-0.5 gap-0.5">
-                                            <div class="h-full bg-[#45C486] rounded-full transition-all duration-300" style="width: 60%;" title="Kebutuhan 60%"></div>
-                                            <div class="h-full bg-[#FFD54F] rounded-full transition-all duration-300" style="width: 30%;" title="Keinginan 30%"></div>
-                                            <div class="h-full bg-[#9B7EDE] rounded-full transition-all duration-300" style="width: 10%;" title="Tabungan / Darurat 10%"></div>
-                                        </div>
-                                        <div class="flex items-center justify-between text-[9px] font-black text-[#526066] mt-1 px-1">
-                                            <span class="flex items-center gap-1 text-[#114A2D]"><span class="w-1.5 h-1.5 rounded-full bg-[#45C486]"></span> 60% Pokok</span>
-                                            <span class="flex items-center gap-1 text-[#634800]"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD54F]"></span> 30% Keinginan</span>
-                                            <span class="flex items-center gap-1 text-[#3A1D75]"><span class="w-1.5 h-1.5 rounded-full bg-[#9B7EDE]"></span> 10% Tabungan</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 3 Expressive Budget Blocks (Vibrant & Tactile) -->
-                                <div class="grid grid-cols-3 gap-2 mb-3">
-                                    <!-- Kebutuhan Block -->
-                                    <div class="p-2 sm:p-2.5 rounded-2xl bg-[#E8F8F0] border-2 border-[#263238] flex flex-col justify-between shadow-[1.5px_1.5px_0_#263238] hover:-translate-y-0.5 transition-transform">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-[9px] font-black uppercase text-[#124D30] tracking-wider">Kebutuhan</span>
-                                            <template x-if="!isCustomLocked"><x-duitmoo-mascot variant="eyes" class="w-4 h-2" /></template>
-                                            <template x-if="isCustomLocked"><x-duitmoo-mascot variant="locked-eyes" class="w-4 h-2" /></template>
-                                        </div>
-                                        <div>
-                                            <template x-if="!isCustomLocked">
-                                                <p class="text-xs font-black text-[#263238] tabular-nums" x-text="'Rp ' + landingNeedsAlloc.toLocaleString('id-ID')"></p>
-                                            </template>
-                                            <template x-if="isCustomLocked">
-                                                <p class="text-[10px] font-black text-[#8F1D1D]">🔒 Kustom</p>
-                                            </template>
-                                            <div class="flex items-center justify-between text-[8px] font-bold text-[#124D30] mt-0.5">
-                                                <span>Pos 1</span>
-                                                <span class="font-black bg-white/70 px-1 rounded">60%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Keinginan Block -->
-                                    <div class="p-2 sm:p-2.5 rounded-2xl bg-[#FFF2CC] border-2 border-[#263238] flex flex-col justify-between shadow-[1.5px_1.5px_0_#263238] hover:-translate-y-0.5 transition-transform">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-[9px] font-black uppercase text-[#263238] tracking-wider">Keinginan</span>
-                                            <template x-if="!isCustomLocked"><x-duitmoo-mascot variant="eyes" class="w-4 h-2" /></template>
-                                            <template x-if="isCustomLocked"><x-duitmoo-mascot variant="locked-eyes" class="w-4 h-2" /></template>
-                                        </div>
-                                        <div>
-                                            <template x-if="!isCustomLocked">
-                                                <p class="text-xs font-black text-[#263238] tabular-nums" x-text="'Rp ' + landingWantsAlloc.toLocaleString('id-ID')"></p>
-                                            </template>
-                                            <template x-if="isCustomLocked">
-                                                <p class="text-[10px] font-black text-[#8F1D1D]">🔒 Kustom</p>
-                                            </template>
-                                            <div class="flex items-center justify-between text-[8px] font-bold text-[#263238] mt-0.5">
-                                                <span>Pos 2</span>
-                                                <span class="font-black bg-white/70 px-1 rounded">30%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Tabungan / Darurat Block -->
-                                    <div class="p-2 sm:p-2.5 rounded-2xl bg-[#F1EBFF] border-2 border-[#263238] flex flex-col justify-between shadow-[1.5px_1.5px_0_#263238] hover:-translate-y-0.5 transition-transform">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-[9px] font-black uppercase text-[#3C1F7A] tracking-wider">Tabungan</span>
-                                            <template x-if="!isCustomLocked"><x-duitmoo-mascot variant="eyes" class="w-4 h-2" /></template>
-                                            <template x-if="isCustomLocked"><x-duitmoo-mascot variant="locked-eyes" class="w-4 h-2" /></template>
-                                        </div>
-                                        <div>
-                                            <template x-if="!isCustomLocked">
-                                                <p class="text-xs font-black text-[#263238] tabular-nums" x-text="'Rp ' + landingEmergAlloc.toLocaleString('id-ID')"></p>
-                                            </template>
-                                            <template x-if="isCustomLocked">
-                                                <p class="text-[10px] font-black text-[#8F1D1D]">🔒 Kustom</p>
-                                            </template>
-                                            <div class="flex items-center justify-between text-[8px] font-bold text-[#3C1F7A] mt-0.5">
-                                                <span>Pos 3</span>
-                                                <span class="font-black bg-white/70 px-1 rounded">10%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Mini Locked Notice (Muncul Saat Slider Digeser) -->
-                                <div x-show="isCustomLocked" x-cloak class="mb-3 p-2.5 rounded-2xl bg-[#FFF2CC] border-2 border-[#263238] text-center space-y-1 shadow-[2px_2px_0_#263238] transition-all">
-                                    <div class="flex items-center justify-center gap-1.5 text-xs font-black text-[#263238]">
-                                        <x-duitmoo-mascot variant="locked-eyes" class="w-5 h-2.5" />
-                                        <span>Mata Terkunci! Daftar untuk Melihat Lengkap</span>
-                                    </div>
-                                    <p class="text-[10px] text-[#546E7A] font-medium leading-tight">
-                                        Daftar akun gratis sekarang untuk membuka simulasi nominal kustom &amp; menyimpan anggaranmu.
-                                    </p>
-                                    <div class="pt-0.5 flex items-center justify-center gap-2">
-                                        <a href="{{ route('register') }}" class="brick-btn brick-btn-blue px-3 py-1 text-[11px] font-black shadow-[1px_1px_0_#263238]">
-                                            Daftar Gratis
-                                        </a>
-                                        <button type="button" @click="resetAmount()" class="px-2.5 py-0.5 rounded-lg border border-[#263238]/30 bg-white text-[10px] font-bold text-[#263238] cursor-pointer">
-                                            Kembalikan
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Realistic Daily Expense Feed Preview with Interactive Lock Overlay -->
-                                <div class="rounded-2xl border-2 border-[#263238] bg-[#FCF6EB] p-2.5 relative overflow-hidden shadow-[2px_2px_0_#263238]">
-                                    <!-- Sample Mini Transactions (Gives Depth & Realism like Gambar 1) -->
-                                    <div class="space-y-1.5 opacity-40 filter blur-[0.8px] select-none pointer-events-none">
-                                        <div class="flex items-center justify-between p-1.5 rounded-xl bg-white border border-[#263238]/20 text-[10px]">
-                                            <div class="flex items-center gap-1.5">
-                                                <span class="w-6 h-6 rounded-lg bg-[#FFEAA0] border border-[#263238]/20 flex items-center justify-center text-xs">☕</span>
-                                                <div>
-                                                    <span class="font-black text-[#263238] block leading-tight">Kopi Sore &amp; Cemilan</span>
-                                                    <span class="text-[8px] text-[#526066]">Keinginan</span>
-                                                </div>
-                                            </div>
-                                            <span class="font-black text-[#C93535]">-Rp 28.000</span>
-                                        </div>
-                                        <div class="flex items-center justify-between p-1.5 rounded-xl bg-white border border-[#263238]/20 text-[10px]">
-                                            <div class="flex items-center gap-1.5">
-                                                <span class="w-6 h-6 rounded-lg bg-[#D8F5E5] border border-[#263238]/20 flex items-center justify-center text-xs">🛒</span>
-                                                <div>
-                                                    <span class="font-black text-[#263238] block leading-tight">Belanja Supermarket</span>
-                                                    <span class="text-[8px] text-[#526066]">Kebutuhan</span>
-                                                </div>
-                                            </div>
-                                            <span class="font-black text-[#C93535]">-Rp 175.000</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Frosted Neo-Brutalism Action Overlay -->
-                                    <div class="absolute inset-0 bg-[#FFFDF9]/85 backdrop-blur-[2px] flex flex-col items-center justify-center p-3 text-center">
-                                        <div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#FFD54F] border border-[#263238] text-[10px] font-black shadow-[1px_1px_0_#263238] mb-1">
-                                            <x-icon name="lock" class="w-3 h-3" />
-                                            <span>Catatan &amp; Analisis Lengkap</span>
-                                        </div>
-                                        <p class="text-[10px] text-[#526066] font-medium leading-tight mb-2 max-w-[210px]">
-                                            Masuk untuk mencatat pengeluaran harian dan sinkronisasi ke Google Sheets otomatis.
-                                        </p>
-                                        <div class="flex items-center gap-2 w-full max-w-[240px]">
-                                            <a href="{{ route('login') }}" class="brick-btn brick-btn-blue flex-1 py-1.5 text-[11px] font-black shadow-[1.5px_1.5px_0_#263238]">
-                                                Masuk
-                                            </a>
-                                            <a href="{{ route('register') }}" class="brick-btn brick-btn-yellow flex-1 py-1.5 text-[11px] font-black shadow-[1.5px_1.5px_0_#263238]">
-                                                Daftar Gratis
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Floating Ergonomic Bottom Nav Pill (Like Gambar 1 & Gambar 2) -->
-                                <div class="mt-3 p-1.5 rounded-2xl bg-[#FFFDF9] border-2 border-[#263238] flex items-center justify-between px-2.5 shadow-[1.5px_1.5px_0_#263238]">
-                                    <div class="flex items-center gap-1">
-                                        <span class="px-2 py-1 rounded-xl bg-[#FFEAA0] text-[#263238] border border-[#263238] text-[10px] font-black flex items-center gap-1 shadow-[1px_1px_0_#263238]">
-                                            <x-icon name="dashboard" class="w-3.5 h-3.5" />
-                                            <span>Beranda</span>
-                                        </span>
-                                        <span class="p-1 text-[#526066]">
-                                            <x-icon name="credit-card" class="w-3.5 h-3.5" />
-                                        </span>
-                                    </div>
-                                    <a href="{{ route('login') }}"
-                                       class="w-7 h-7 -my-1 rounded-xl bg-[#FFD54F] border-2 border-[#263238] text-[#263238] flex items-center justify-center shadow-[1.5px_1.5px_0_#263238] hover:scale-110 active:scale-95 transition-transform"
-                                       aria-label="Catat">
-                                        <x-icon name="plus" class="w-3.5 h-3.5 stroke-[3]" />
-                                    </a>
-                                    <div class="flex items-center gap-1.5 text-[#526066]">
-                                        <span class="p-1">
-                                            <x-icon name="piggy-bank" class="w-3.5 h-3.5" />
-                                        </span>
-                                        <span class="p-1">
-                                            <x-icon name="user" class="w-3.5 h-3.5" />
-                                        </span>
-                                    </div>
-                                </div>
-
+                        <!-- Header App Strip (Gambar Pertama Hilang sesuai permintaan) -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-[11px] font-bold text-[#546E7A] block">Simulasi Anggaran</span>
+                                <h2 class="text-xl font-black text-[#263238]">Papan Keuangan</h2>
                             </div>
                         </div>
+
+                        <!-- Interactive Balance Setter Box -->
+                        <div class="p-4 rounded-2xl bg-[#FCF6EB] border-2 border-[#263238]/15 mb-4 space-y-2">
+                            <div class="flex justify-between items-center text-xs font-bold text-[#546E7A]">
+                                <span>Saldo Awal yang Dimiliki</span>
+                                <span class="text-[#245AE0]">Geser &darr;</span>
+                            </div>
+                            <p class="text-2xl sm:text-3xl font-black text-[#263238] tabular-nums" x-text="'Rp ' + (landingAmount || 0).toLocaleString('id-ID')"></p>
+
+                            <!-- Interactive Nominal Presets & Slider -->
+                            <div class="pt-1 flex items-center gap-2">
+                                <button type="button" @click="setAmount(3000000)"
+                                        :class="landingAmount === 3000000 ? 'bg-[#FFD54F] border-[#263238] scale-105' : 'bg-white border-[#263238]/20'"
+                                        class="px-2.5 py-1 rounded-xl border-2 text-[11px] font-black text-[#263238] transition-transform cursor-pointer">
+                                    3 Jt
+                                </button>
+                                <button type="button" @click="setAmount(5000000)"
+                                        :class="landingAmount === 5000000 ? 'bg-[#FFD54F] border-[#263238] scale-105' : 'bg-white border-[#263238]/20'"
+                                        class="px-2.5 py-1 rounded-xl border-2 text-[11px] font-black text-[#263238] transition-transform cursor-pointer">
+                                    5 Jt
+                                </button>
+                                <button type="button" @click="setAmount(10000000)"
+                                        :class="landingAmount === 10000000 ? 'bg-[#FFD54F] border-[#263238] scale-105' : 'bg-white border-[#263238]/20'"
+                                        class="px-2.5 py-1 rounded-xl border-2 text-[11px] font-black text-[#263238] transition-transform cursor-pointer">
+                                    10 Jt
+                                </button>
+                                <input type="range" min="1000000" max="15000000" step="500000" x-model.number="landingAmount"
+                                       @input="isCustomLocked = (landingAmount != 5000000)"
+                                       aria-label="Ubah Nominal Saldo" class="ml-1 w-full accent-[#245AE0] cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- 3 Expressive Budget Bricks with Dynamic Locked Eyes on Slider Move -->
+                        <div class="grid grid-cols-3 gap-2 mb-3">
+                            <!-- Needs Block -->
+                            <div class="p-2.5 sm:p-3 rounded-2xl bg-[#E8F8F0] border-2 border-[#263238] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[10px] font-black text-[#124D30]">Kebutuhan</span>
+                                    <template x-if="!isCustomLocked">
+                                        <x-duitmoo-mascot variant="eyes" class="w-5 h-2.5" />
+                                    </template>
+                                    <template x-if="isCustomLocked">
+                                        <x-duitmoo-mascot variant="locked-eyes" class="w-5 h-2.5" />
+                                    </template>
+                                </div>
+                                <div>
+                                    <template x-if="!isCustomLocked">
+                                        <p class="text-xs font-black text-[#263238] tabular-nums" x-text="'Rp ' + landingNeedsAlloc.toLocaleString('id-ID')"></p>
+                                    </template>
+                                    <template x-if="isCustomLocked">
+                                        <p class="text-[11px] font-black text-[#8F1D1D] flex items-center gap-0.5">🔒 Terkunci</p>
+                                    </template>
+                                    <span class="text-[9px] font-bold text-[#124D30]">60%</span>
+                                </div>
+                            </div>
+
+                            <!-- Wants Block -->
+                            <div class="p-2.5 sm:p-3 rounded-2xl bg-[#FFF2CC] border-2 border-[#263238] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[10px] font-black text-[#263238]">Keinginan</span>
+                                    <template x-if="!isCustomLocked">
+                                        <x-duitmoo-mascot variant="eyes" class="w-5 h-2.5" />
+                                    </template>
+                                    <template x-if="isCustomLocked">
+                                        <x-duitmoo-mascot variant="locked-eyes" class="w-5 h-2.5" />
+                                    </template>
+                                </div>
+                                <div>
+                                    <template x-if="!isCustomLocked">
+                                        <p class="text-xs font-black text-[#263238] tabular-nums" x-text="'Rp ' + landingWantsAlloc.toLocaleString('id-ID')"></p>
+                                    </template>
+                                    <template x-if="isCustomLocked">
+                                        <p class="text-[11px] font-black text-[#8F1D1D] flex items-center gap-0.5">🔒 Terkunci</p>
+                                    </template>
+                                    <span class="text-[9px] font-bold text-[#263238]">30%</span>
+                                </div>
+                            </div>
+
+                            <!-- Emergency Block -->
+                            <div class="p-2.5 sm:p-3 rounded-2xl bg-[#F1EBFF] border-2 border-[#263238] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[10px] font-black text-[#3C1F7A]">Darurat</span>
+                                    <template x-if="!isCustomLocked">
+                                        <x-duitmoo-mascot variant="eyes" class="w-5 h-2.5" />
+                                    </template>
+                                    <template x-if="isCustomLocked">
+                                        <x-duitmoo-mascot variant="locked-eyes" class="w-5 h-2.5" />
+                                    </template>
+                                </div>
+                                <div>
+                                    <template x-if="!isCustomLocked">
+                                        <p class="text-xs font-black text-[#263238] tabular-nums" x-text="'Rp ' + landingEmergAlloc.toLocaleString('id-ID')"></p>
+                                    </template>
+                                    <template x-if="isCustomLocked">
+                                        <p class="text-[11px] font-black text-[#8F1D1D] flex items-center gap-0.5">🔒 Terkunci</p>
+                                    </template>
+                                    <span class="text-[9px] font-bold text-[#3C1F7A]">10%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Locked Notice (Muncul Saat Slider Digeser) -->
+                        <div x-show="isCustomLocked" x-cloak class="mb-4 p-3 rounded-2xl bg-[#FFF2CC] border-2 border-[#263238] text-center space-y-1.5 shadow-[2px_2px_0_#263238] transition-all">
+                            <div class="flex items-center justify-center gap-1.5 text-xs font-black text-[#263238]">
+                                <x-duitmoo-mascot variant="locked-eyes" class="w-6 h-3" />
+                                <span>Mata Terkunci! Daftar untuk Melihat Lengkap</span>
+                            </div>
+                            <p class="text-[11px] text-[#546E7A] font-medium leading-tight">
+                                Daftar akun gratis sekarang untuk membuka simulasi nominal kustom &amp; menyimpan anggaranmu.
+                            </p>
+                            <div class="pt-1 flex items-center justify-center gap-2">
+                                <a href="{{ route('register') }}" class="brick-btn brick-btn-blue px-3.5 py-1.5 text-xs font-black shadow-[1px_1px_0_#263238]">
+                                    Daftar Gratis
+                                </a>
+                                <button type="button" @click="resetAmount()" class="px-3 py-1 rounded-xl border border-[#263238]/30 bg-white text-[11px] font-bold text-[#263238] cursor-pointer">
+                                    Kembalikan
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Private Locked State for Financial Transactions (HANYA BISA DILIHAT KALAU LOGIN DULU) -->
+                        <div class="p-5 rounded-3xl bg-[#FCF6EB] border-2 border-[#263238] text-center space-y-3 relative overflow-hidden shadow-[2px_2px_0_#263238]">
+                            <div class="w-11 h-11 rounded-2xl bg-[#FFF2CC] border-2 border-[#263238] mx-auto flex items-center justify-center text-[#263238] shadow-[2px_2px_0_#263238] anim-cow-bob">
+                                <x-icon name="lock" class="w-5 h-5 text-[#263238]" />
+                            </div>
+
+                            <div>
+                                <h3 class="text-sm font-black text-[#263238]">Catatan Belanja &amp; Sisa Keuangan</h3>
+                                <p class="text-[11px] text-[#546E7A] mt-1 font-medium leading-relaxed max-w-[270px] mx-auto">
+                                    Catatan transaksi harian dan grafik analisis hanya bisa diakses setelah kamu masuk ke akunmu.
+                                </p>
+                            </div>
+
+                            <div class="pt-1 flex flex-col sm:flex-row items-center gap-2">
+                                <a href="{{ route('login') }}" class="brick-btn brick-btn-blue flex-1 w-full py-2.5 text-xs font-black flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#263238]">
+                                    <x-icon name="log-in" class="w-4 h-4" />
+                                    <span>Masuk ke Akun</span>
+                                </a>
+                                <a href="{{ route('register') }}" class="brick-btn brick-btn-yellow flex-1 w-full py-2.5 text-xs font-black flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#263238]">
+                                    <span>Buat Akun Baru</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Floating Pill Bar -->
+                        <div class="mt-4 p-2 rounded-2xl bg-[#FCF6EB] border border-[#263238]/20 flex items-center justify-between px-4">
+                            <div class="flex items-center gap-5 text-[#263238]">
+                                <span class="p-1.5 rounded-xl bg-[#263238] text-white">
+                                    <x-icon name="layout-dashboard" class="w-4 h-4" />
+                                </span>
+                                <span class="text-gray-400">
+                                    <x-icon name="receipt" class="w-4 h-4" />
+                                </span>
+                                <span class="text-gray-400">
+                                    <x-icon name="pie-chart" class="w-4 h-4" />
+                                </span>
+                            </div>
+                            <a href="{{ route('login') }}" class="w-8 h-8 rounded-xl bg-[#263238] text-white flex items-center justify-center hover:scale-105 transition-transform" aria-label="Masuk">
+                                <x-icon name="plus" class="w-4 h-4" />
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
