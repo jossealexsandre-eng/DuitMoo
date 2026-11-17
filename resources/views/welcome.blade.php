@@ -276,72 +276,70 @@
 
             </section>
 
-            <!-- 3. Section: Cara Kerja Nyata (Crafted Neo-Brutalism Storytelling Cards) -->
-            <section id="cara-kerja" class="py-12 sm:py-20 px-4 sm:px-8 max-w-5xl mx-auto w-full">
-                <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            <!-- 3. Section: Cara Kerja Nyata (Crisp, Punchy, Zero-Emoji Slop) -->
+            <section id="cara-kerja" class="py-12 sm:py-16 px-4 sm:px-8 max-w-5xl mx-auto w-full">
+                <div class="text-center max-w-xl mx-auto mb-10 sm:mb-12">
                     <h2 class="text-2xl sm:text-4xl font-black text-[#263238] tracking-tight leading-tight">
                         Gaji Nggak Cuma Numpang Lewat Lagi.
                     </h2>
-                    <p class="text-xs sm:text-sm text-[#526066] font-medium mt-3 leading-relaxed">
-                        Tanpa rumus Excel rumit yang bikin pusing. Tiga kebiasaan kecil yang bikin kamu tetap pegang kendali dari tanggal 1 sampai akhir bulan.
+                    <p class="text-xs sm:text-sm text-[#526066] font-medium mt-2">
+                        Tiga langkah sederhana agar gajimu tidak habis tanpa jejak.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 items-stretch">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 items-stretch">
                     <!-- Step 1: Kunci Pos Kebutuhan -->
-                    <div class="p-6 sm:p-7 rounded-3xl bg-[#EDFAF3] border-2 border-[#263238] shadow-[4px_4px_0_#263238] hover:-translate-y-1 transition-transform flex flex-col justify-between relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 w-24 h-24 bg-white/40 rounded-bl-full pointer-events-none"></div>
-
+                    <div class="p-5 sm:p-6 rounded-3xl bg-[#EDFAF3] border-2 border-[#263238] shadow-[4px_4px_0_#263238] hover:-translate-y-1 transition-transform flex flex-col justify-between">
                         <div>
                             <!-- Header Pill Badge -->
-                            <div class="flex items-center justify-between mb-5 relative z-10">
-                                <span class="px-2.5 py-1 rounded-xl bg-white border border-[#263238] text-[11px] font-black text-[#114A2D] shadow-[1.5px_1.5px_0_#263238]">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-2.5 py-1 rounded-xl bg-white border border-[#263238] text-[10px] font-black text-[#114A2D] shadow-[1px_1px_0_#263238]">
                                     01 · HARI GAJIAN
                                 </span>
-                                <x-duitmoo-mascot variant="eyes" class="w-8 h-4 opacity-80" />
+                                <x-duitmoo-mascot variant="eyes" class="w-7 h-3.5 opacity-80" />
                             </div>
 
-                            <!-- Mini Graphic Snippet (Interactive Visual Artifact) -->
-                            <div class="p-3.5 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mb-5">
+                            <!-- Mini Graphic Snippet -->
+                            <div class="p-3 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mb-4">
                                 <div class="flex items-center justify-between text-xs font-black text-[#263238] mb-1.5">
                                     <span class="flex items-center gap-1.5">
                                         <span class="w-2 h-2 rounded-full bg-[#45C486]"></span>
                                         Kebutuhan 50%
                                     </span>
-                                    <span class="text-[#1C7C49]">Terkunci Aman</span>
+                                    <span class="text-[#1C7C49] text-[11px]">Terkunci Aman</span>
                                 </div>
-                                <div class="w-full bg-[#EDFAF3] border border-[#263238] rounded-full h-2.5 p-0.5 overflow-hidden">
+                                <div class="w-full bg-[#EDFAF3] border border-[#263238] rounded-full h-2 p-0.5 overflow-hidden">
                                     <div class="h-full bg-[#45C486] rounded-full w-full"></div>
                                 </div>
-                                <p class="text-[10px] font-bold text-[#526066] mt-1.5">Kos, tagihan WiFi, makan pokok: beres duluan</p>
+                                <p class="text-[10px] font-bold text-[#526066] mt-1.5">Sewa, makan pokok &amp; tagihan</p>
                             </div>
 
-                            <h3 class="text-base sm:text-lg font-black text-[#263238] mb-2 leading-snug">
+                            <h3 class="text-base font-black text-[#263238] mb-1.5 leading-snug">
                                 Pisahkan Uang Wajib Begitu Gaji Masuk
                             </h3>
                             <p class="text-xs text-[#526066] font-medium leading-relaxed">
-                                Begitu notifikasi transferan bunyi, langsung kunci biaya sewa, cicilan, dan belanja dapur. Uang yang tersisa di layar adalah nominal yang beneran aman kamu nikmati.
+                                Kunci dana sewa, tagihan, dan belanja pokok. Sisa saldo di layar adalah uang yang aman kamu pakai.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Step 2: Catat 3 Detik di HP -->
-                    <div class="p-6 sm:p-7 rounded-3xl bg-[#FFF9E6] border-2 border-[#263238] shadow-[4px_4px_0_#263238] hover:-translate-y-1 transition-transform flex flex-col justify-between relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 w-24 h-24 bg-white/40 rounded-bl-full pointer-events-none"></div>
-
+                    <!-- Step 2: Catat Cepat di HP -->
+                    <div class="p-5 sm:p-6 rounded-3xl bg-[#FFF9E6] border-2 border-[#263238] shadow-[4px_4px_0_#263238] hover:-translate-y-1 transition-transform flex flex-col justify-between">
                         <div>
                             <!-- Header Pill Badge -->
-                            <div class="flex items-center justify-between mb-5 relative z-10">
-                                <span class="px-2.5 py-1 rounded-xl bg-white border border-[#263238] text-[11px] font-black text-[#634800] shadow-[1.5px_1.5px_0_#263238]">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-2.5 py-1 rounded-xl bg-white border border-[#263238] text-[10px] font-black text-[#634800] shadow-[1px_1px_0_#263238]">
                                     02 · SAAT JAJAN
                                 </span>
-                                <span class="text-base">⚡</span>
+                                <div class="w-6 h-6 rounded-lg bg-white border border-[#263238] flex items-center justify-center text-[10px] font-black text-[#263238]">
+                                    <x-icon name="credit-card" class="w-3.5 h-3.5" />
+                                </div>
                             </div>
 
-                            <!-- Mini Graphic Snippet (Receipt Slip Mockup) -->
-                            <div class="p-3.5 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mb-5">
+                            <!-- Mini Graphic Snippet -->
+                            <div class="p-3 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mb-4">
                                 <div class="flex items-center justify-between text-xs font-black text-[#263238]">
-                                    <span class="truncate">☕ Es Kopi Susu</span>
+                                    <span>Es Kopi Susu</span>
                                     <span class="text-[#C93535] shrink-0">-Rp 24.000</span>
                                 </div>
                                 <div class="flex items-center justify-between text-[10px] text-[#526066] font-bold mt-1.5 pt-1.5 border-t border-dashed border-[#263238]/20">
@@ -350,56 +348,66 @@
                                 </div>
                             </div>
 
-                            <h3 class="text-base sm:text-lg font-black text-[#263238] mb-2 leading-snug">
-                                Catat di HP Sebelum Kasir Selesai Kasih Bon
+                            <h3 class="text-base font-black text-[#263238] mb-1.5 leading-snug">
+                                Catat di HP Sebelum Kasir Kasih Bon
                             </h3>
                             <p class="text-xs text-[#526066] font-medium leading-relaxed">
-                                Lupakan repot buka spreadsheet di laptop. Tombol tambah cepat pas di jangkauan jempolmu, ketik nominal, simpan dalam 3 detik sambil jalan keluar kafe.
+                                Cukup buka dari browser HP. Ketik nominalnya dan simpan dalam 3 detik pas di jangkauan jempol.
                             </p>
                         </div>
                     </div>
 
                     <!-- Step 3: Self-Reward Tanpa Boncos -->
-                    <div class="p-6 sm:p-7 rounded-3xl bg-[#F5F0FF] border-2 border-[#263238] shadow-[4px_4px_0_#263238] hover:-translate-y-1 transition-transform flex flex-col justify-between relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 w-24 h-24 bg-white/40 rounded-bl-full pointer-events-none"></div>
-
+                    <div class="p-5 sm:p-6 rounded-3xl bg-[#F5F0FF] border-2 border-[#263238] shadow-[4px_4px_0_#263238] hover:-translate-y-1 transition-transform flex flex-col justify-between">
                         <div>
                             <!-- Header Pill Badge -->
-                            <div class="flex items-center justify-between mb-5 relative z-10">
-                                <span class="px-2.5 py-1 rounded-xl bg-white border border-[#263238] text-[11px] font-black text-[#3A1D75] shadow-[1.5px_1.5px_0_#263238]">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-2.5 py-1 rounded-xl bg-white border border-[#263238] text-[10px] font-black text-[#3A1D75] shadow-[1px_1px_0_#263238]">
                                     03 · AKHIR BULAN
                                 </span>
-                                <span class="text-base">🎉</span>
+                                <div class="w-6 h-6 rounded-lg bg-white border border-[#263238] flex items-center justify-center text-[10px] font-black text-[#263238]">
+                                    <x-icon name="trending-up" class="w-3.5 h-3.5" />
+                                </div>
                             </div>
 
-                            <!-- Mini Graphic Snippet (Real Balance Clarity) -->
-                            <div class="p-3.5 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mb-5">
+                            <!-- Mini Graphic Snippet -->
+                            <div class="p-3 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mb-4">
                                 <div class="flex items-center justify-between text-xs font-black text-[#263238] mb-1">
                                     <span>Sisa Pos Keinginan</span>
                                     <span class="px-1.5 py-0.5 rounded-md bg-[#D8F5E5] text-[#114A2D] text-[9px] font-black border border-[#263238]">AMAN</span>
                                 </div>
                                 <p class="text-sm font-black text-[#263238]">Rp 450.000</p>
-                                <p class="text-[10px] font-bold text-[#526066] mt-0.5">Boleh checkout barang impian tanpa rasa cemas</p>
+                                <p class="text-[10px] font-bold text-[#526066] mt-0.5">Boleh checkout tanpa rasa cemas</p>
                             </div>
 
-                            <h3 class="text-base sm:text-lg font-black text-[#263238] mb-2 leading-snug">
+                            <h3 class="text-base font-black text-[#263238] mb-1.5 leading-snug">
                                 Nol Rasa Bersalah Saat Pengin Self-Reward
                             </h3>
                             <p class="text-xs text-[#526066] font-medium leading-relaxed">
-                                Tahu persis kapan boleh makan enak atau nonton bioskop, dan kapan harus ngerem. Kamu belanja santai karena pos tabungan dan daruratmu tetap utuh.
+                                Pantau sisa pos keinginan secara real-time. Kamu belanja santai karena pos tabunganmu tetap utuh.
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Mid-Section CTA Banner -->
+                <div class="mt-8 text-center">
+                    <a href="{{ route('register') }}"
+                       class="brick-btn brick-btn-yellow px-6 py-3 text-xs sm:text-sm font-black inline-flex items-center gap-2 shadow-[2px_2px_0_#263238] hover:scale-105 transition-transform">
+                        <span>Mulai Atur Anggaran — 100% Gratis!</span>
+                        <x-icon name="arrow-right" class="w-4 h-4" />
+                    </a>
+                </div>
             </section>
 
-            <!-- 4. Section: Privacy & Guarantee (Authentic Neo-Brutalism Trust Seal) -->
-            <section id="komitmen" class="py-8 sm:py-14 px-4 sm:px-8 max-w-5xl mx-auto w-full">
-                <div class="p-6 sm:p-10 rounded-[32px] bg-[#FFFDF9] border-2 border-[#263238] shadow-[5px_5px_0_#263238] relative overflow-hidden">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                        <div class="lg:col-span-7 space-y-4">
+            <!-- 4. Section: Privacy & Guarantee (Clean Vector-Based Trust Seal) -->
+            <section id="komitmen" class="py-8 sm:py-12 px-4 sm:px-8 max-w-5xl mx-auto w-full">
+                <div class="p-6 sm:p-9 rounded-[32px] bg-[#FFFDF9] border-2 border-[#263238] shadow-[5px_5px_0_#263238] relative overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-3.5">
                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-[#FFEAA0] border-2 border-[#263238] shadow-[1.5px_1.5px_0_#263238]">
-                                <span class="text-xs font-black text-[#263238] tracking-wider uppercase">🛡️ 100% Catatan Mandiri</span>
+                                <x-icon name="shield-check" class="w-4 h-4 text-[#263238]" />
+                                <span class="text-xs font-black text-[#263238] tracking-wider uppercase">100% Catatan Mandiri</span>
                             </div>
 
                             <h3 class="text-2xl sm:text-3xl font-black text-[#263238] tracking-tight leading-tight">
@@ -407,41 +415,44 @@
                             </h3>
 
                             <p class="text-xs sm:text-sm text-[#526066] font-medium leading-relaxed">
-                                DuitMoo bukan pinjol dan bukan aplikasi bank. Kami tidak pernah meminta nomor rekening, PIN m-Banking, atau data kartu debitmu. Semua catatan murni milik pribadimu.
+                                DuitMoo murni buku kas mandiri. Tanpa hubung rekening bank, tanpa data kartu, dan tanpa izin akses perbankan.
                             </p>
 
                             <!-- 3 Concrete Trust Badges -->
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
                                 <div class="p-2.5 rounded-xl bg-[#FCF6EB] border border-[#263238]/30 flex items-center gap-2">
                                     <span class="w-5 h-5 rounded-lg bg-white border border-[#263238] flex items-center justify-center text-[10px] font-black text-[#1C7C49]">✓</span>
-                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Nol Akses Perbankan</span>
+                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Nol Akses Bank</span>
                                 </div>
                                 <div class="p-2.5 rounded-xl bg-[#FCF6EB] border border-[#263238]/30 flex items-center gap-2">
                                     <span class="w-5 h-5 rounded-lg bg-white border border-[#263238] flex items-center justify-center text-[10px] font-black text-[#1C7C49]">✓</span>
-                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Mode Sensor Privasi</span>
+                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Mode Sensor Saldo</span>
                                 </div>
                                 <div class="p-2.5 rounded-xl bg-[#FCF6EB] border border-[#263238]/30 flex items-center gap-2">
                                     <span class="w-5 h-5 rounded-lg bg-white border border-[#263238] flex items-center justify-center text-[10px] font-black text-[#1C7C49]">✓</span>
-                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Sinkron Google Sheets</span>
+                                    <span class="text-[11px] font-black text-[#263238] leading-tight">Ekspor G-Sheets</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Right CTA Card -->
-                        <div class="lg:col-span-5 p-6 rounded-2xl bg-[#FFF9E6] border-2 border-[#263238] shadow-[3px_3px_0_#263238] text-center space-y-3">
-                            <div class="w-12 h-12 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mx-auto flex items-center justify-center text-xl">
-                                🐮
+                        <div class="lg:col-span-5 p-5 sm:p-6 rounded-2xl bg-[#FFF9E6] border-2 border-[#263238] shadow-[3px_3px_0_#263238] text-center space-y-3">
+                            <div class="w-12 h-12 rounded-2xl bg-white border-2 border-[#263238] shadow-[2px_2px_0_#263238] mx-auto flex items-center justify-center p-2">
+                                <x-brand-logo size="sm" />
                             </div>
                             <div>
-                                <h4 class="font-black text-base text-[#263238]">Siap Berhenti Boncos?</h4>
-                                <p class="text-xs text-[#634800] font-medium mt-0.5">Mulai atur alokasi uangmu sekarang. Gratis, tanpa syarat ribet.</p>
+                                <span class="px-2 py-0.5 rounded-md bg-[#EDFAF3] text-[#114A2D] border border-[#263238] text-[10px] font-black uppercase">
+                                    Gratis Selamanya!
+                                </span>
+                                <h4 class="font-black text-base text-[#263238] mt-1.5">Siap Berhenti Boncos?</h4>
+                                <p class="text-xs text-[#634800] font-medium mt-0.5">Mulai atur alokasi uangmu sekarang tanpa biaya langganan.</p>
                             </div>
                             <a href="{{ route('register') }}"
                                class="brick-btn brick-btn-yellow w-full py-3 text-xs sm:text-sm font-black flex items-center justify-center gap-2 shadow-[2px_2px_0_#263238] hover:scale-102 transition-transform">
-                                <span>Buat Akun DuitMoo Gratis</span>
+                                <span>Daftar Sekarang — Gratis!</span>
                                 <x-icon name="arrow-right" class="w-4 h-4" />
                             </a>
-                            <p class="text-[10px] text-[#526066] font-bold">Langsung bisa dipakai di browser HP</p>
+                            <p class="text-[10px] text-[#526066] font-bold">Tanpa kartu kredit · Siap pakai di HP</p>
                         </div>
                     </div>
                 </div>
