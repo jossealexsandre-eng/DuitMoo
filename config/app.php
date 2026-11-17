@@ -97,7 +97,18 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'key' => env('APP_KEY') ?: 'base64:EKUCVB76xJdldLMpeAA7p4a/BcSe2Ehr648ekPqzSms=',
+    'key' => (function () {
+        $key = (string) env('APP_KEY');
+        if (str_starts_with($key, 'base64:')) {
+            $decoded = base64_decode(substr($key, 7), true);
+            if ($decoded !== false && strlen($decoded) === 32) {
+                return $key;
+            }
+        } elseif (strlen($key) === 32) {
+            return $key;
+        }
+        return 'base64:EKUCVB76xJdldLMpeAA7p4a/BcSe2Ehr648ekPqzSms=';
+    })(),
 
     'previous_keys' => [
         ...array_filter(
