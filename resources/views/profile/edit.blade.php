@@ -63,9 +63,6 @@
             </form>
         </div>
 
-        <!-- 2. PWA Installation Guide -->
-        <x-pwa-install-guide />
-
         <!-- 3. Google Sheets Optional Sync Card -->
         <div class="brick-card p-6 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div class="flex items-start gap-3">
