@@ -9,15 +9,15 @@ return [
     |--------------------------------------------------------------------------
     | Default Database Connection Name
     |--------------------------------------------------------------------------
-    |
-    | Here you may specify which of the database connections below you wish
-    | to use as your default connection for database operations. This is
-    | the connection which will be utilized unless another connection
-    | is explicitly specified when you execute a query / statement.
-    |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => (function () {
+        $conn = env('DB_CONNECTION');
+        if ($conn === 'pgsql' && (empty(env('DB_HOST')) || str_contains((string) env('DB_HOST'), 'SUPABASE') || str_contains((string) env('DB_HOST'), '<'))) {
+            return 'mysql';
+        }
+        return $conn ?: (env('MYSQLHOST') ? 'mysql' : 'sqlite');
+    })(),
 
     /*
     |--------------------------------------------------------------------------
@@ -46,12 +46,42 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => env('DB_URL', env('MYSQL_URL', env('MYSQL_PRIVATE_URL'))),
+            'host' => (function () {
+                $host = env('DB_HOST');
+                if (empty($host) || str_contains($host, 'SUPABASE') || str_contains($host, '<')) {
+                    return env('MYSQLHOST', env('MYSQL_HOST', '127.0.0.1'));
+                }
+                return $host;
+            })(),
+            'port' => (function () {
+                $port = env('DB_PORT');
+                if (empty($port) || $port == '5432') {
+                    return env('MYSQLPORT', env('MYSQL_PORT', '3306'));
+                }
+                return $port;
+            })(),
+            'database' => (function () {
+                $db = env('DB_DATABASE');
+                if (empty($db) || $db === 'postgres' || str_contains($db, '<')) {
+                    return env('MYSQLDATABASE', env('MYSQL_DATABASE', 'railway'));
+                }
+                return $db;
+            })(),
+            'username' => (function () {
+                $user = env('DB_USERNAME');
+                if (empty($user) || str_contains($user, 'SUPABASE') || str_contains($user, '<')) {
+                    return env('MYSQLUSER', env('MYSQL_USER', 'root'));
+                }
+                return $user;
+            })(),
+            'password' => (function () {
+                $pass = env('DB_PASSWORD');
+                if (empty($pass) || str_contains($pass, 'DATABASE_PASSWORD') || str_contains($pass, '<')) {
+                    return env('MYSQLPASSWORD', env('MYSQL_PASSWORD', ''));
+                }
+                return $pass;
+            })(),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
