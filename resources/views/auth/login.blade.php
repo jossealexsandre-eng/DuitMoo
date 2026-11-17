@@ -40,22 +40,6 @@
                 <span class="bg-white px-3 text-[11px] font-black uppercase tracking-wider text-[#526066] absolute">atau dengan email</span>
             </div>
 
-            <div class="mb-5 p-3.5 bg-[#FCF6EB] border border-dashed border-[#263238]/40 rounded-2xl text-xs flex flex-col gap-1.5" x-data>
-                <div class="flex items-center justify-between font-bold text-[#263238]">
-                    <span class="flex items-center gap-1.5">
-                        <x-icon name="lightbulb" class="w-4 h-4 text-[#245AE0]" />
-                        <span>Akun Uji Coba (Demo)</span>
-                    </span>
-                    <button type="button"
-                            @click="document.getElementById('email').value='demo@duitmoo.test'; document.getElementById('password').value='password123';"
-                            class="px-2.5 py-1 bg-[#FFD54F] border border-[#263238] rounded-lg text-[11px] font-black hover:bg-[#F7C731] cursor-pointer">
-                        Isi Otomatis
-                    </button>
-                </div>
-                <p class="text-[#526066]">Email: <code class="font-mono font-bold text-[#263238]">demo@duitmoo.test</code></p>
-                <p class="text-[#526066]">Password: <code class="font-mono font-bold text-[#263238]">password123</code></p>
-            </div>
-
             <form action="{{ route('login') }}" method="POST" class="space-y-4">
                 @csrf
 
