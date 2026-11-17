@@ -63,7 +63,7 @@
                 <!-- Center Mascot & Greeting Bubble -->
                 <div class="flex flex-col items-center justify-center mb-6">
                     <div class="relative inline-block anim-cow-bob">
-                        <x-duitmoo-mascot variant="hero" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.08)]" />
+                        <img src="{{ asset('images/mascot/moowie-wave.png') }}" alt="Moowie Mascot" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.12)] hover:scale-105 transition-transform" />
                         <span class="absolute -bottom-2 -right-2 px-2.5 py-0.5 rounded-full bg-[#FFD54F] border border-[#263238] text-[10px] font-black shadow-[1px_1px_0_#263238]">
                             Moo!
                         </span>
@@ -279,7 +279,7 @@
             <section id="cara-kerja" class="py-12 sm:py-16 px-4 sm:px-8 max-w-5xl mx-auto w-full">
                 <div class="text-center max-w-xl mx-auto mb-10 sm:mb-12">
                     <h2 class="text-2xl sm:text-4xl font-black text-[#263238] tracking-tight leading-tight">
-                        Gaji Nggak Cuma Numpang Lewat Lagi.
+                        Boncos? Yuk diatur lagi.
                     </h2>
                     <p class="text-xs sm:text-sm text-[#526066] font-medium mt-2">
                         Tiga langkah sederhana agar gajimu tidak habis tanpa jejak.

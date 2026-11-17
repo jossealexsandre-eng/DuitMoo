@@ -18,11 +18,14 @@
 
         <!-- Header -->
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-                <h1 class="text-2xl sm:text-3xl font-black text-[#263238]">Pengaturan Anggaran &amp; Kategori</h1>
-                <p class="text-xs sm:text-sm text-gray-600 font-medium mt-1">
-                    Sesuaikan saldo awal, rasio pembagian 100%, dan kelola kategori pemasukan maupun pengeluaranmu.
-                </p>
+            <div class="flex items-center gap-3">
+                <img src="{{ asset('images/mascot/moowie-thumb.png') }}" alt="Moowie" class="w-14 h-14 sm:w-16 sm:h-16 shrink-0 drop-shadow-[0_4px_8px_rgba(0,0,0,0.1)]">
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-black text-[#263238]">Pengaturan Anggaran &amp; Kategori</h1>
+                    <p class="text-xs sm:text-sm text-gray-600 font-medium mt-1">
+                        Sesuaikan saldo awal, rasio pembagian 100%, dan kelola kategori pemasukan maupun pengeluaranmu.
+                    </p>
+                </div>
             </div>
 
             <form method="GET" action="{{ route('budget.settings') }}" class="flex items-center gap-2">

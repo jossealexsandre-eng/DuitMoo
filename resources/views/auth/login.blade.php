@@ -9,6 +9,7 @@
 
         <div class="brick-card-pop w-full max-w-md p-6 sm:p-8 bg-white">
             <div class="mb-6 text-center">
+                <img src="{{ asset('images/mascot/moowie-wave.png') }}" alt="Moowie" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_4px_8px_rgba(0,0,0,0.1)] hover:scale-110 transition-transform">
                 <h2 class="text-2xl font-black text-[#263238]">Selamat Datang Kembali</h2>
                 <p class="text-sm text-[#526066] mt-1 font-medium">Masuk untuk melihat &amp; mengatur anggaranmu.</p>
             </div>

@@ -256,6 +256,7 @@
                 </div>
             @else
                 <div class="text-center py-12 px-4">
+                    <img src="{{ asset('images/mascot/moowie-sad.png') }}" alt="Moowie" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_4px_8px_rgba(0,0,0,0.08)]">
                     <h3 class="font-black text-base text-[#263238]">Tidak ada transaksi yang cocok dengan filter</h3>
                     <p class="text-xs text-[#526066] mt-1 max-w-sm mx-auto">
                         Ubah rentang tanggal atau kata kunci, atau catat transaksi baru sekarang.

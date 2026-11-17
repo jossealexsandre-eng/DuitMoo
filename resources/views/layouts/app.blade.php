@@ -183,11 +183,15 @@
                 @endif
             </nav>
 
-            <!-- Subtle Bottom Stamp -->
-            <div class="mt-auto pt-4 border-t border-[#263238]/10 text-center">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FCF6EB] border border-[#263238]/20 rounded-xl text-[10px] font-black text-[#526066]">
-                    <span>🐮</span> DuitMoo 2.0
-                </span>
+            <!-- Subtle Bottom Mascot Card -->
+            <div class="mt-auto pt-4 border-t border-[#263238]/10">
+                <div class="p-2.5 bg-[#FCF6EB] border-2 border-[#263238] rounded-2xl shadow-[2px_2px_0_#263238] flex items-center gap-2.5">
+                    <img src="{{ asset('images/mascot/moowie-thumb.png') }}" alt="Moowie" class="w-9 h-9 shrink-0 drop-shadow-[1px_1px_0_#263238]">
+                    <div class="min-w-0">
+                        <p class="font-black text-xs text-[#263238] leading-tight">Moowie</p>
+                        <p class="text-[10px] font-bold text-[#526066] truncate">Siap kawal budgetmu!</p>
+                    </div>
+                </div>
             </div>
         </aside>
 

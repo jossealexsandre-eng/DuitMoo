@@ -174,9 +174,7 @@
                 </div>
             @else
                 <div class="p-10 rounded-3xl bg-white border-2 border-dashed border-[#263238]/35 text-center flex flex-col items-center justify-center gap-2">
-                    <div class="w-14 h-14 bg-[#FFF9E6] rounded-2xl border-2 border-[#263238] shadow-[2px_2px_0_#263238] flex items-center justify-center text-2xl mb-1">
-                        🐮
-                    </div>
+                    <img src="{{ asset('images/mascot/moowie-thumb.png') }}" alt="Moowie" class="w-16 h-16 mb-1 drop-shadow-[0_4px_8px_rgba(0,0,0,0.1)]">
                     <p class="font-black text-base text-[#263238]">Belum ada Celengan Impian</p>
                     <p class="text-xs text-[#526066] max-w-sm mb-3">Punya target beli barang impian, dana liburan, atau tabungan khusus? Yuk buat celengan pertamamu!</p>
                     <button type="button" @click="showGoalModal = true; triggerFeedback('tap')"

@@ -3,13 +3,16 @@
 
         <!-- A. Calm Greeting Header -->
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-                <h1 class="text-2xl sm:text-3xl font-black text-[#263238]">
-                    Halo, {{ auth()->user()->name }}
-                </h1>
-                <p class="text-xs sm:text-sm text-[#526066] font-medium mt-0.5">
-                    Ringkasan uang dan alokasi anggaran periode {{ $monthLabel }}.
-                </p>
+            <div class="flex items-center gap-3">
+                <img src="{{ asset('images/mascot/moowie-wave.png') }}" alt="Moowie" class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 drop-shadow-[2px_2px_0_#263238] hover:rotate-6 transition-transform">
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-black text-[#263238]">
+                        Halo, {{ auth()->user()->name }}
+                    </h1>
+                    <p class="text-xs sm:text-sm text-[#526066] font-medium mt-0.5">
+                        Ringkasan uang dan alokasi anggaran periode {{ $monthLabel }}.
+                    </p>
+                </div>
             </div>
 
             <div class="flex flex-wrap items-center gap-2">
@@ -361,9 +364,7 @@
                 </div>
             @else
                 <div class="p-8 rounded-2xl bg-[#FCF6EB] border-2 border-dashed border-[#263238]/30 text-center flex flex-col items-center justify-center gap-2">
-                    <div class="w-12 h-12 bg-white rounded-2xl border-2 border-[#263238] shadow-[2px_2px_0_#263238] flex items-center justify-center text-xl mb-1">
-                        📮
-                    </div>
+                    <img src="{{ asset('images/mascot/moowie-sad.png') }}" alt="Belum ada transaksi" class="w-20 h-20 sm:w-24 sm:h-24 mb-1 drop-shadow-[2px_2px_0_rgba(38,50,56,0.12)] hover:scale-105 transition-transform">
                     <p class="font-black text-sm text-[#263238]">Belum ada transaksi di bulan {{ $monthLabel }}</p>
                     <p class="text-xs text-[#526066] max-w-sm mb-3">Catat pemasukan atau pengeluaran pertamamu agar grafik dan sisa pos langsung terhitung.</p>
                     <button type="button" @click="triggerFeedback('tap'); $dispatch('open-quick-add')" class="brick-btn brick-btn-yellow px-5 py-2 text-xs font-black shadow-[2px_2px_0_#263238]">
@@ -375,10 +376,8 @@
 
         <!-- Bridge Banner to Full Financial Reports & Analytics -->
         <div class="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#FFFDF9] border-2 border-[#263238] shadow-[3px_3px_0_#263238] flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-            <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-2xl bg-[#D8F5E5] border-2 border-[#263238] shadow-[1.5px_1.5px_0_#263238] flex items-center justify-center text-xl shrink-0">
-                    📈
-                </div>
+            <div class="flex items-center gap-3.5">
+                <img src="{{ asset('images/mascot/moowie-chart.png') }}" alt="Moowie Analytics" class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 drop-shadow-[2px_2px_0_#263238] hover:scale-105 transition-transform">
                 <div>
                     <h3 class="font-black text-sm sm:text-base text-[#263238]">Ingin Analisis &amp; Grafik Lengkap?</h3>
                     <p class="text-xs text-[#526066] font-medium">Buka evaluasi tren per bulan, peringkat kategori pengeluaran, dan unduh CSV.</p>
