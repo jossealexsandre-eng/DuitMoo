@@ -12,7 +12,7 @@
                 </p>
             </div>
 
-            <div class="flex flex-wrap items-center gap-2.5">
+            <div class="flex flex-wrap items-center gap-2">
                 <form method="GET" action="{{ route('dashboard') }}" class="flex items-center">
                     <label for="dash-month-select" class="sr-only">Pilih Bulan</label>
                     <select id="dash-month-select" name="month" onchange="this.form.submit()"
@@ -26,13 +26,13 @@
                 </form>
 
                 <button type="button" @click="$dispatch('open-receipt-modal')"
-                        class="brick-btn brick-btn-white px-3.5 py-2 text-xs sm:text-sm font-black flex items-center gap-1.5 cursor-pointer">
+                        class="hidden sm:inline-flex brick-btn brick-btn-white px-3.5 py-2 text-xs sm:text-sm font-black items-center gap-1.5 cursor-pointer">
                     <x-icon name="receipt" class="w-4 h-4 text-[#245AE0]" />
                     <span>Slip Struk</span>
                 </button>
 
                 <button type="button" @click="triggerFeedback('tap'); $dispatch('open-quick-add')"
-                        class="brick-btn brick-btn-yellow px-4 py-2 text-xs sm:text-sm font-black flex items-center gap-2 cursor-pointer">
+                        class="hidden sm:inline-flex brick-btn brick-btn-yellow px-4 py-2 text-xs sm:text-sm font-black items-center gap-2 cursor-pointer">
                     <x-icon name="plus" class="w-4 h-4" />
                     <span>Catat Transaksi</span>
                 </button>
@@ -86,34 +86,34 @@
                 </div>
             </div>
 
-            <!-- 3 Executive Numbers: Total Pemasukan, Total Pengeluaran, & Profit / Net Income -->
-            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div class="p-4 sm:p-5 rounded-3xl border-2 border-[#263238] bg-[#EDFAF3] shadow-[3px_3px_0_#263238] flex flex-col justify-between">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-[#114A2D]">Total Pemasukan</span>
-                        <div class="p-1.5 bg-[#D8F5E5] border border-[#263238] rounded-xl">
-                            <x-icon name="arrow-down-left" class="w-4 h-4 text-[#1C7C49]" />
+            <!-- 3 Executive Numbers: Total Pemasukan, Total Pengeluaran, & Profit / Net Income (Compact 3-Col Grid on Mobile & Desktop) -->
+            <div class="lg:col-span-7 grid grid-cols-3 gap-2 sm:gap-4">
+                <div class="p-3 sm:p-5 rounded-2xl sm:rounded-3xl border-2 border-[#263238] bg-[#EDFAF3] shadow-[2px_2px_0_#263238] sm:shadow-[3px_3px_0_#263238] flex flex-col justify-between">
+                    <div class="flex items-center justify-between gap-1">
+                        <span class="text-[11px] sm:text-xs font-bold text-[#114A2D] truncate">Pemasukan</span>
+                        <div class="p-1 sm:p-1.5 bg-[#D8F5E5] border border-[#263238] rounded-lg sm:rounded-xl shrink-0">
+                            <x-icon name="arrow-down-left" class="w-3 h-3 sm:w-4 sm:h-4 text-[#1C7C49]" />
                         </div>
                     </div>
-                    <p class="text-lg sm:text-xl font-black text-[#1C7C49] mt-2 truncate">
+                    <p class="text-xs sm:text-lg lg:text-xl font-black text-[#1C7C49] mt-1.5 sm:mt-2 truncate">
                         <span x-show="!hideBalance">+Rp {{ number_format($summary['income'], 0, ',', '.') }}</span>
-                        <span x-show="hideBalance" x-cloak>+Rp ••••••••</span>
+                        <span x-show="hideBalance" x-cloak>+Rp ••••</span>
                     </p>
-                    <span class="text-xs font-medium text-[#526066] mt-2 block">Dana masuk ({{ $monthLabel }})</span>
+                    <span class="hidden sm:block text-xs font-medium text-[#526066] mt-2 truncate">Dana masuk ({{ $monthLabel }})</span>
                 </div>
 
-                <div class="p-4 sm:p-5 rounded-3xl border-2 border-[#263238] bg-[#FFF0ED] shadow-[3px_3px_0_#263238] flex flex-col justify-between">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-[#8C1D1D]">Total Pengeluaran</span>
-                        <div class="p-1.5 bg-[#FFE2DE] border border-[#263238] rounded-xl">
-                            <x-icon name="arrow-up-right" class="w-4 h-4 text-[#C93535]" />
+                <div class="p-3 sm:p-5 rounded-2xl sm:rounded-3xl border-2 border-[#263238] bg-[#FFF0ED] shadow-[2px_2px_0_#263238] sm:shadow-[3px_3px_0_#263238] flex flex-col justify-between">
+                    <div class="flex items-center justify-between gap-1">
+                        <span class="text-[11px] sm:text-xs font-bold text-[#8C1D1D] truncate">Pengeluaran</span>
+                        <div class="p-1 sm:p-1.5 bg-[#FFE2DE] border border-[#263238] rounded-lg sm:rounded-xl shrink-0">
+                            <x-icon name="arrow-up-right" class="w-3 h-3 sm:w-4 sm:h-4 text-[#C93535]" />
                         </div>
                     </div>
-                    <p class="text-lg sm:text-xl font-black text-[#C93535] mt-2 truncate">
+                    <p class="text-xs sm:text-lg lg:text-xl font-black text-[#C93535] mt-1.5 sm:mt-2 truncate">
                         <span x-show="!hideBalance">-Rp {{ number_format($summary['total_expenses'], 0, ',', '.') }}</span>
-                        <span x-show="hideBalance" x-cloak>-Rp ••••••••</span>
+                        <span x-show="hideBalance" x-cloak>-Rp ••••</span>
                     </p>
-                    <span class="text-xs font-medium text-[#526066] mt-2 block">Dana keluar ({{ $monthLabel }})</span>
+                    <span class="hidden sm:block text-xs font-medium text-[#526066] mt-2 truncate">Dana keluar ({{ $monthLabel }})</span>
                 </div>
 
                 @php
@@ -121,21 +121,99 @@
                     $profitMargin = $summary['profit_margin_percent'] ?? ($summary['income'] > 0 ? round(($profitIncome / $summary['income']) * 100, 1) : 0);
                     $isProfitable = $profitIncome >= 0;
                 @endphp
-                <div class="p-4 sm:p-5 rounded-3xl border-2 border-[#263238] {{ $isProfitable ? 'bg-[#FFF9E6]' : 'bg-[#FFE2DE]' }} shadow-[3px_3px_0_#263238] flex flex-col justify-between">
+                <div class="p-3 sm:p-5 rounded-2xl sm:rounded-3xl border-2 border-[#263238] {{ $isProfitable ? 'bg-[#FFF9E6]' : 'bg-[#FFE2DE]' }} shadow-[2px_2px_0_#263238] sm:shadow-[3px_3px_0_#263238] flex flex-col justify-between">
                     <div class="flex items-center justify-between gap-1">
-                        <span class="text-xs font-bold text-[#263238]">Profit / Net Income</span>
-                        <span class="px-2 py-0.5 rounded-lg border border-[#263238] {{ $isProfitable ? 'bg-[#D8F5E5] text-[#114A2D]' : 'bg-white text-[#8C1D1D]' }} text-[10px] font-black">
+                        <span class="text-[11px] sm:text-xs font-bold text-[#263238] truncate">Profit</span>
+                        <span class="px-1.5 py-0.5 rounded-md sm:rounded-lg border border-[#263238] {{ $isProfitable ? 'bg-[#D8F5E5] text-[#114A2D]' : 'bg-white text-[#8C1D1D]' }} text-[8px] sm:text-[10px] font-black shrink-0">
                             {{ $isProfitable ? 'PROFIT' : 'DEFISIT' }}
                         </span>
                     </div>
-                    <p class="text-lg sm:text-xl font-black {{ $isProfitable ? 'text-[#1C7C49]' : 'text-[#C93535]' }} mt-2 truncate">
+                    <p class="text-xs sm:text-lg lg:text-xl font-black {{ $isProfitable ? 'text-[#1C7C49]' : 'text-[#C93535]' }} mt-1.5 sm:mt-2 truncate">
                         <span x-show="!hideBalance">{{ $isProfitable ? '+' : '-' }}Rp {{ number_format(abs($profitIncome), 0, ',', '.') }}</span>
-                        <span x-show="hideBalance" x-cloak>{{ $isProfitable ? '+' : '-' }}Rp ••••••••</span>
+                        <span x-show="hideBalance" x-cloak>{{ $isProfitable ? '+' : '-' }}Rp ••••</span>
                     </p>
-                    <span class="text-xs font-bold text-[#526066] mt-2 block">
-                        Rasio Profit: <strong class="text-[#263238]">{{ $profitMargin }}%</strong>
+                    <span class="hidden sm:block text-xs font-bold text-[#526066] mt-2 truncate">
+                        Rasio: <strong class="text-[#263238]">{{ $profitMargin }}%</strong>
                     </span>
                 </div>
+            </div>
+        </div>
+
+        <!-- Quick Access Feature Grid (Solves Mobile Discoverability: 6 Core Features 1-Tap Away) -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between gap-2 mb-3">
+                <h2 class="text-xs sm:text-sm font-black text-[#526066] uppercase tracking-wider flex items-center gap-1.5">
+                    <x-icon name="dashboard" class="w-4 h-4 text-[#263238]" />
+                    <span>Fitur & Menu Utama</span>
+                </h2>
+                <span class="text-[10px] sm:text-xs font-bold text-[#8C9BA5]">Akses cepat</span>
+            </div>
+
+            <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3">
+                <!-- 1. Atur Pos Anggaran -->
+                <a href="{{ route('budget.settings', ['month' => $selectedMonth]) }}"
+                   @click="triggerFeedback('tap')"
+                   class="p-2.5 sm:p-3.5 rounded-2xl border-2 border-[#263238] bg-[#EAE2FF] shadow-[2px_2px_0_#263238] hover:shadow-[3px_3px_0_#263238] active:translate-y-0.5 active:shadow-none transition flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border-2 border-[#263238] flex items-center justify-center text-[#3A1D75] group-hover:scale-105 transition shadow-[1px_1px_0_#263238] mb-1.5">
+                        <x-icon name="sliders" class="w-4 h-4 sm:w-5 sm:h-5" />
+                    </div>
+                    <span class="text-[11px] sm:text-xs font-black text-[#263238] leading-tight">Atur Pos</span>
+                    <span class="text-[9px] sm:text-[10px] text-[#526066] font-bold">50 / 30 / 20</span>
+                </a>
+
+                <!-- 2. Tagihan Rutin -->
+                <a href="{{ route('bills.index') }}"
+                   @click="triggerFeedback('tap')"
+                   class="p-2.5 sm:p-3.5 rounded-2xl border-2 border-[#263238] bg-[#FFE2DE] shadow-[2px_2px_0_#263238] hover:shadow-[3px_3px_0_#263238] active:translate-y-0.5 active:shadow-none transition flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border-2 border-[#263238] flex items-center justify-center text-[#8C1D1D] group-hover:scale-105 transition shadow-[1px_1px_0_#263238] mb-1.5">
+                        <x-icon name="bell" class="w-4 h-4 sm:w-5 sm:h-5" />
+                    </div>
+                    <span class="text-[11px] sm:text-xs font-black text-[#263238] leading-tight">Tagihan</span>
+                    <span class="text-[9px] sm:text-[10px] text-[#526066] font-bold">Pengingat</span>
+                </a>
+
+                <!-- 3. Celengan Impian -->
+                <a href="{{ route('goals.index') }}"
+                   @click="triggerFeedback('tap')"
+                   class="p-2.5 sm:p-3.5 rounded-2xl border-2 border-[#263238] bg-[#FFF9E6] shadow-[2px_2px_0_#263238] hover:shadow-[3px_3px_0_#263238] active:translate-y-0.5 active:shadow-none transition flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border-2 border-[#263238] flex items-center justify-center text-[#634800] group-hover:scale-105 transition shadow-[1px_1px_0_#263238] mb-1.5">
+                        <x-icon name="piggy-bank" class="w-4 h-4 sm:w-5 sm:h-5" />
+                    </div>
+                    <span class="text-[11px] sm:text-xs font-black text-[#263238] leading-tight">Celengan</span>
+                    <span class="text-[9px] sm:text-[10px] text-[#526066] font-bold">Tabungan</span>
+                </a>
+
+                <!-- 4. Laporan & Grafik -->
+                <a href="{{ route('reports.index') }}"
+                   @click="triggerFeedback('tap')"
+                   class="p-2.5 sm:p-3.5 rounded-2xl border-2 border-[#263238] bg-[#D8F5E5] shadow-[2px_2px_0_#263238] hover:shadow-[3px_3px_0_#263238] active:translate-y-0.5 active:shadow-none transition flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border-2 border-[#263238] flex items-center justify-center text-[#114A2D] group-hover:scale-105 transition shadow-[1px_1px_0_#263238] mb-1.5">
+                        <x-icon name="trending-up" class="w-4 h-4 sm:w-5 sm:h-5" />
+                    </div>
+                    <span class="text-[11px] sm:text-xs font-black text-[#263238] leading-tight">Laporan</span>
+                    <span class="text-[9px] sm:text-[10px] text-[#526066] font-bold">Statistik</span>
+                </a>
+
+                <!-- 5. Slip Struk -->
+                <button type="button" @click="triggerFeedback('tap'); $dispatch('open-receipt-modal')"
+                   class="p-2.5 sm:p-3.5 rounded-2xl border-2 border-[#263238] bg-[#E0EAFF] shadow-[2px_2px_0_#263238] hover:shadow-[3px_3px_0_#263238] active:translate-y-0.5 active:shadow-none transition flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border-2 border-[#263238] flex items-center justify-center text-[#163C94] group-hover:scale-105 transition shadow-[1px_1px_0_#263238] mb-1.5">
+                        <x-icon name="receipt" class="w-4 h-4 sm:w-5 sm:h-5" />
+                    </div>
+                    <span class="text-[11px] sm:text-xs font-black text-[#263238] leading-tight">Slip Struk</span>
+                    <span class="text-[9px] sm:text-[10px] text-[#526066] font-bold">Unduh POS</span>
+                </button>
+
+                <!-- 6. Google Sheets Sync -->
+                <a href="{{ route('settings.google-sheets') }}"
+                   @click="triggerFeedback('tap')"
+                   class="p-2.5 sm:p-3.5 rounded-2xl border-2 border-[#263238] bg-[#EDFAF3] shadow-[2px_2px_0_#263238] hover:shadow-[3px_3px_0_#263238] active:translate-y-0.5 active:shadow-none transition flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border-2 border-[#263238] flex items-center justify-center text-[#0F9D58] group-hover:scale-105 transition shadow-[1px_1px_0_#263238] mb-1.5">
+                        <x-icon name="file-text" class="w-4 h-4 sm:w-5 sm:h-5 text-[#0F9D58]" />
+                    </div>
+                    <span class="text-[11px] sm:text-xs font-black text-[#263238] leading-tight">G-Sheets</span>
+                    <span class="text-[9px] sm:text-[10px] text-[#526066] font-bold">Sinkronisasi</span>
+                </a>
             </div>
         </div>
 
